@@ -48,8 +48,21 @@ public class Tablero {
      
     }
 
-    public int calculaNumMinasCasilla(int fila, int salida){
+    public int calculaNumMinasCasilla(int fila, int columna){
         int total = 0;
+        
+        for (int i = (fila - 1); i <= (fila + 1); i++) {
+            if (i >= 0 && i < getNumFilas()) {
+                for (int j = (columna - 1); j <= (columna + 1); j++) {
+                    if (j >= 0 && j < getNumColumnas()) {
+                        if (getTabla()[i][j].isMina()) {
+                            total++;
+                        }
+                    }
+                }
+            }
+
+        }
         
         return total; 
     }
