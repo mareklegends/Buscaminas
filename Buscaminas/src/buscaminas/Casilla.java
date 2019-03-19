@@ -20,6 +20,10 @@ public class Casilla {
         this.numero = numero;
     }
 
+    Casilla() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public boolean isMina() {
         return mina;
     }

@@ -20,27 +20,48 @@ public class Tablero {
         this.tabla = new Casilla[numFilas][numColumnas];
     }
     
-    
+    public void insetarMinas(int nMinas){
+        
+        for (int i = 0; i < getTabla().length; i++) {
+            for (int j = 0; j < getTabla()[i].length; j++) {
+                getTabla()[i][j] = new Casilla();
+            }
+        }
+        
+        
+        Random r = new Random();
+        for (int i = 0; i < nMinas; i++) {
+            int fila = r.nextInt(this.numFilas);
+            int columna = r.nextInt(this.numColumnas);
+            
+            if (!tabla[fila][columna].isMina()) {
+                getTabla()[fila][columna].setMina(true);
+            } else {
+                i--;
+            }
+            
+        }
+    } 
      
     
-    public static void imprimirPrueba(){
+    public void imprimirPrueba(){
      
     }
 
-    public static int calculaNumMinasCasilla(int fila, int salida){
+    public int calculaNumMinasCasilla(int fila, int salida){
         int total = 0;
         
         return total; 
     }
 
-    public static Casilla getCasilla(int fila, int columna){
+    public  Casilla getCasilla(int fila, int columna){
        
         
         
         return null;        
     }
     
-    public static void calcularTablero(){
+    public  void calcularTablero(){
         
     }
 
