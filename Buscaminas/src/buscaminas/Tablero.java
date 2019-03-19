@@ -38,6 +38,38 @@ public class Tablero {
     public static void calcularTablero(){
         
     }
+
+    public int getNumFilas() {
+        return numFilas;
+    }
+
+    public void setNumFilas(int numFilas) {
+        this.numFilas = numFilas;
+    }
+
+    public int getNumColumnas() {
+        return numColumnas;
+    }
+
+    public void setNumColumnas(int numColumnas) {
+        this.numColumnas = numColumnas;
+    }
+
+    public int getNumMinas() {
+        return numMinas;
+    }
+
+    public void setNumMinas(int numMinas) {
+        this.numMinas = numMinas;
+    }
+
+    public Casilla[][] getTabla() {
+        return tabla;
+    }
+
+    public void setTabla(Casilla[][] tabla) {
+        this.tabla = tabla;
+    }
     
     
     

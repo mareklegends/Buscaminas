@@ -17,10 +17,14 @@ public class Juego {
         
     }
     
-    public void configurarJuetgo(){
+    public void configurarJuego(){
         Scanner leerFilas = new Scanner(System.in);
         Scanner leerColumnas = new Scanner(System.in);
         Scanner leerMinas = new Scanner(System.in);
+        
+        System.out.println("/*/*/*/*/*/*/*/*/*/*/*/*/*/*");
+        System.out.println("Buscaminas");
+        System.out.println("/*/*/*/*/*/*/*/*/*/*/*/*/*/*");
         
         System.out.println("Dime las filas");
         int filas = leerFilas.nextInt();
