@@ -45,7 +45,7 @@ public class Tablero {
      
     
     public void imprimirPrueba(){
-             
+          
     }
 
     public int calculaNumMinasCasilla(int fila, int columna){
