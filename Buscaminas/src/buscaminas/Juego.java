@@ -26,11 +26,11 @@ public class Juego {
         System.out.println("Buscaminas");
         System.out.println("/*/*/*/*/*/*/*/*/*/*/*/*/*/*");
         
-        System.out.println("Dime las filas");
+        System.out.println(">> Dime las filas");
         int filas = leerFilas.nextInt();
-        System.out.println("Dime las columnas");
+        System.out.println(">> Dime las columnas");
         int columnas = leerColumnas.nextInt();
-        System.out.println("Dime las minas");
+        System.out.println(">> Dime las minas");
         int minas = leerMinas.nextInt();      
         
         
