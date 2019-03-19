@@ -6,26 +6,26 @@ package buscaminas;
  * @author marcos
  */
 public class Casilla {
-    private boolean mira;
+    private boolean mina;
     private boolean blanco;
     private boolean bandera;
     private boolean visible;
     private int numero;
 
-    public Casilla(boolean mira, boolean blanco, boolean bandera, boolean visible, int numero) {
-        this.mira = mira;
+    public Casilla(boolean mina, boolean blanco, boolean bandera, boolean visible, int numero) {
+        this.mina = mina;
         this.blanco = blanco;
         this.bandera = bandera;
         this.visible = visible;
         this.numero = numero;
     }
 
-    public boolean isMira() {
-        return mira;
+    public boolean isMina() {
+        return mina;
     }
 
-    public void setMira(boolean mira) {
-        this.mira = mira;
+    public void setMina(boolean mira) {
+        this.mina = mina;
     }
 
     public boolean isBlanco() {

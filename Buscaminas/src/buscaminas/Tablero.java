@@ -1,6 +1,8 @@
 
 package buscaminas;
 
+import java.util.Random;
+
 /**
  *
  * @author marcos
@@ -17,6 +19,9 @@ public class Tablero {
         this.numMinas = 0;
         this.tabla = new Casilla[numFilas][numColumnas];
     }
+    
+    
+     
     
     public static void imprimirPrueba(){
      
