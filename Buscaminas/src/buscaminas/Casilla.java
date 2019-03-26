@@ -40,6 +40,26 @@ public class Casilla {
         this.visible = false;
         this.numero = 0;
     }
+    
+    public String imprimirPrueba(){
+        String datos="";
+        
+        if (bandera==true) {
+             return "B";
+        }
+        if (numero>0) {
+            datos+=numero;
+        }
+        if (mina==true) {
+            return "M";
+        }
+        if (blanco==true) {
+            datos+="-";
+        }
+        
+        return datos;
+    }
+    
 /**
  * Método que devuelve si una casilla tiene una mina o no
  * @return boolean mina: si la casilla es mina true, false si es contrario
@@ -47,11 +67,18 @@ public class Casilla {
     public boolean isMina() {
         return mina;
     }
-/**
- * 
+
+    @Override
+    public String toString() {
+        return "";
+    }
+    
+    
+    
+/** 
  * @param mira 
  */
-    public void setMina(boolean mira) {
+    public void setMina(boolean mina) {
         this.mina = mina;
     }
 

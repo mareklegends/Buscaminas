@@ -15,9 +15,9 @@ public class Tablero {
     private Casilla[][] tabla;
 
     /**
-     *
-     * @param numFilas
-     * @param numColumnas
+     * Constructor que inicializa la tabla
+     * @param numFilas número de filas del tablero
+     * @param numColumnas número de columnas del tablero
      */
     public Tablero(int numFilas, int numColumnas) {
         this.numFilas = numFilas;
@@ -25,33 +25,30 @@ public class Tablero {
         this.numMinas = 0;
         this.tabla = new Casilla[numFilas][numColumnas];
         
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
+        for (int i = 0; i < this.numFilas; i++) {
+            for (int j = 0; j < this.numColumnas; j++) {
                 tabla[i][j] = new Casilla();
             }
         }
     }
     
     /**
-     *
+     * Constructor que rellena el tablero de minas     * 
      * @param nMinas
      */
-    public void insetarMinas(int nMinas){
+    public void insetarMinas(int nMinas){       
+       
+        this.numMinas= nMinas;        
+      
+        int fila, columna;
         
-        for (int i = 0; i < getTabla().length; i++) {
-            for (int j = 0; j < getTabla()[i].length; j++) {
-                getTabla()[i][j] = new Casilla();
-            }
-        }
-        
-        
-        Random r = new Random();
-        for (int i = 0; i < nMinas; i++) {
-            int fila = r.nextInt(this.numFilas);
-            int columna = r.nextInt(this.numColumnas);
+        for (int i = 0; i < nMinas; i++) {   
+              Random r = new Random();
+            fila = r.nextInt(this.numFilas);
+            columna = r.nextInt(this.numColumnas);
             
             if (!tabla[fila][columna].isMina()) {
-                getTabla()[fila][columna].setMina(true);
+                tabla[fila][columna].setMina(true);
             } else {
                 i--;
             }
@@ -60,10 +57,41 @@ public class Tablero {
     } 
      
     /**
-     *
+     * Imprime el tablero 
      */
     public void imprimirPrueba(){
+        
+        int contador = 0;
+        
+        System.out.println("/=======/");
+          System.out.print("    ");
+        for (int i = 0; i < this.numColumnas; i++) {
+             
+            System.out.print(i);
+            System.out.print(" ");
+            
+        }
+          System.out.println("");
+          for (int i = 0; i < this.numFilas; i++) {
+                System.out.print(i+" "+"| ");
+              for (int j = 0; j < this.numColumnas; j++) {
+                  
+                  System.out.print(tabla[i][j].imprimirPrueba() +" ");
+              }
+                 System.out.print("| "+i+" ");
+              System.out.println("");
+              
+        }
           
+              System.out.print("    ");
+        for (int i = 0; i < this.numColumnas; i++) {
+             
+            System.out.print(i);
+            System.out.print(" ");
+            
+        }
+          System.out.println(" ");
+           System.out.println("/=======/");
         
     }
 

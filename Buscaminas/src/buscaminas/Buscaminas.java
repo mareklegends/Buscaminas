@@ -16,7 +16,9 @@ public class Buscaminas {
      */
     public static void main(String[] args) {
         
-
+        Tablero t = new Tablero(5, 5);
+        t.insetarMinas(5);
+        t.imprimirPrueba();
         
     }
     
