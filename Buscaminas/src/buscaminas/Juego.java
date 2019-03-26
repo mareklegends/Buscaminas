@@ -13,10 +13,16 @@ public class Juego {
     private int numFilas;
     private int numColumnas;    
 
+    /**
+     *
+     */
     public Juego() {
         
     }
     
+    /**
+     *
+     */
     public void configurarJuego(){
         Scanner leerFilas = new Scanner(System.in);
         Scanner leerColumnas = new Scanner(System.in);
@@ -36,10 +42,16 @@ public class Juego {
         
     }
     
+    /**
+     *
+     */
     public void iniciarJuego(){
         
     }
     
+    /**
+     *
+     */
     public void Jugar(){
         
     }

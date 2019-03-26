@@ -14,6 +14,11 @@ public class Tablero {
     private int numMinas;
     private Casilla[][] tabla;
 
+    /**
+     *
+     * @param numFilas
+     * @param numColumnas
+     */
     public Tablero(int numFilas, int numColumnas) {
         this.numFilas = numFilas;
         this.numColumnas = numColumnas;
@@ -21,6 +26,10 @@ public class Tablero {
         this.tabla = new Casilla[numFilas][numColumnas];
     }
     
+    /**
+     *
+     * @param nMinas
+     */
     public void insetarMinas(int nMinas){
         
         for (int i = 0; i < getTabla().length; i++) {
@@ -44,12 +53,20 @@ public class Tablero {
         }
     } 
      
-    
+    /**
+     *
+     */
     public void imprimirPrueba(){
           
         
     }
 
+    /**
+     *
+     * @param fila
+     * @param columna
+     * @return
+     */
     public int calculaNumMinasCasilla(int fila, int columna){
         int total = 0;
         
@@ -69,6 +86,12 @@ public class Tablero {
         return total; 
     }
 
+    /**
+     *
+     * @param fila
+     * @param columna
+     * @return
+     */
     public  Casilla getCasilla(int fila, int columna){
        
         
@@ -76,38 +99,73 @@ public class Tablero {
         return null;        
     }
     
+    /**
+     *
+     */
     public  void calcularTablero(){
         
     }
 
+    /**
+     *
+     * @return
+     */
     public int getNumFilas() {
         return numFilas;
     }
 
+    /**
+     *
+     * @param numFilas
+     */
     public void setNumFilas(int numFilas) {
         this.numFilas = numFilas;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getNumColumnas() {
         return numColumnas;
     }
 
+    /**
+     *
+     * @param numColumnas
+     */
     public void setNumColumnas(int numColumnas) {
         this.numColumnas = numColumnas;
     }
 
+    /**
+     *
+     * @return
+     */
     public int getNumMinas() {
         return numMinas;
     }
 
+    /**
+     *
+     * @param numMinas
+     */
     public void setNumMinas(int numMinas) {
         this.numMinas = numMinas;
     }
 
+    /**
+     *
+     * @return
+     */
     public Casilla[][] getTabla() {
         return tabla;
     }
 
+    /**
+     *
+     * @param tabla
+     */
     public void setTabla(Casilla[][] tabla) {
         this.tabla = tabla;
     }
