@@ -2,6 +2,7 @@
 
 package buscaminas;
 
+
 import java.util.Random;
 
 /**
@@ -13,6 +14,7 @@ public class Tablero {
     private int numColumnas;
     private int numMinas;
     private Casilla[][] tabla;
+    
 
     /**
      * Constructor que inicializa la tabla
@@ -62,8 +64,8 @@ public class Tablero {
     public void imprimirPrueba(){
         
         int contador = 0;
-        
-        System.out.println("/=======/");
+        System.out.println("B U S C A M I N A S");
+        System.out.println("___________________ ___________________");
           System.out.print("    ");
         for (int i = 0; i < this.numColumnas; i++) {
              
@@ -72,6 +74,9 @@ public class Tablero {
             
         }
           System.out.println("");
+          
+          
+          
           for (int i = 0; i < this.numFilas; i++) {
                 System.out.print(i+" "+"| ");
               for (int j = 0; j < this.numColumnas; j++) {
@@ -91,12 +96,12 @@ public class Tablero {
             
         }
           System.out.println(" ");
-           System.out.println("/=======/");
+           System.out.println("___________________ ___________________");
         
     }
 
     /**
-     *
+     * Calcula la cantidad de minas que tiene al lado  
      * @param fila
      * @param columna
      * @return
@@ -127,7 +132,7 @@ public class Tablero {
      * @return
      */
     public  Casilla getCasilla(int fila, int columna){
-       
+    
         
         
         return null;        
