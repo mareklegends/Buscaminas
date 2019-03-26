@@ -44,14 +44,18 @@ public class Casilla {
     public String imprimirPrueba(){
         String datos="";
         
+      
+        
         if (bandera==true) {
-             return "B";
+             //return "B";
+             return "🏳";
         }
         if (numero>0) {
             datos+=numero;
         }
         if (mina==true) {
-            return "M";
+            //return ="M";
+            return "◕";
         }
         if (blanco==true) {
             datos+="-";
