@@ -1,4 +1,5 @@
 
+
 package buscaminas;
 
 import java.util.Random;
