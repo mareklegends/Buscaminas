@@ -29,7 +29,6 @@ public class Casilla {
         this.visible = visible;
         this.numero = numero;
     }
-
     /**
      * Constructor por defecto, inicializa los atributos
      */
