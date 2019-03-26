@@ -24,6 +24,12 @@ public class Tablero {
         this.numColumnas = numColumnas;
         this.numMinas = 0;
         this.tabla = new Casilla[numFilas][numColumnas];
+        
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                tabla[i][j] = new Casilla();
+            }
+        }
     }
     
     /**
