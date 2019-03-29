@@ -61,6 +61,8 @@ public class Juego {
      *
      */
     public void Jugar(){
+        configurarJuego();
+        iniciarJuego();
         
     }
     
