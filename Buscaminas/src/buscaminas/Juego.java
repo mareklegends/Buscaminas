@@ -30,17 +30,19 @@ public class Juego {
         Scanner leerFilas = new Scanner(System.in);
         Scanner leerColumnas = new Scanner(System.in);
         Scanner leerMinas = new Scanner(System.in);
-        
-        System.out.println("/*/*/*/*/*/*/*/*/*/*/*/*/*/*");
+         System.out.println("______________________________________");
         System.out.println("Buscaminas");
-        System.out.println("/*/*/*/*/*/*/*/*/*/*/*/*/*/*");
+         System.out.println("______________________________________");
         
         System.out.println(">> Dime las filas");
         this.numFilas = leerFilas.nextInt();
+         System.out.println("______________________________________");
         System.out.println(">> Dime las columnas");
         this.numColumnas = leerColumnas.nextInt();
+         System.out.println("______________________________________");
         System.out.println(">> Dime las minas");
         this.numMinas = leerMinas.nextInt();      
+         System.out.println("______________________________________");
         
         
     }
@@ -62,6 +64,7 @@ public class Juego {
     }
     
     private void mostrarTablero(){
+        tablero.imprimirPrueba();
         
     }
     

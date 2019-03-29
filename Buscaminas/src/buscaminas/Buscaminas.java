@@ -18,6 +18,7 @@ public class Buscaminas {
         
         Juego j = new Juego();
         j.configurarJuego();
+        j.iniciarJuego();
         /*
         Tablero t = new Tablero(9, 9);
         t.insetarMinas(5);
