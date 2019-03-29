@@ -17,7 +17,10 @@ public class Juego {
      *
      */
     public Juego() {
-        
+        this.numFilas = 0;
+        this.numColumnas = 0;
+        this.numMinas = 0;
+        this.tablero= null;
     }
     
     /**
@@ -33,11 +36,11 @@ public class Juego {
         System.out.println("/*/*/*/*/*/*/*/*/*/*/*/*/*/*");
         
         System.out.println(">> Dime las filas");
-        int filas = leerFilas.nextInt();
+        this.numFilas = leerFilas.nextInt();
         System.out.println(">> Dime las columnas");
-        int columnas = leerColumnas.nextInt();
+        this.numColumnas = leerColumnas.nextInt();
         System.out.println(">> Dime las minas");
-        int minas = leerMinas.nextInt();      
+        this.numMinas = leerMinas.nextInt();      
         
         
     }
@@ -46,7 +49,9 @@ public class Juego {
      *
      */
     public void iniciarJuego(){
-        
+        this.tablero = new Tablero(numFilas, numColumnas);
+        tablero.insetarMinas(numMinas);
+        tablero.calcularTablero();
     }
     
     /**
