@@ -132,17 +132,54 @@ public class Tablero {
      * @return
      */
     public  Casilla getCasilla(int fila, int columna){
-    
-        
-        
-        return null;        
+     Casilla c = null;
+        if (fila >= 0 && fila <= numFilas && columna >= 00 && columna < numColumnas) {
+            c = tabla[fila][columna];
+        }
+        return c;      
     }
     
     /**
      *
      */
     public  void calcularTablero(){
-        
+        int contador2 = 0;
+        for (int i = 0; i < tabla[0].length; i++) {
+            if (i == 0) {
+                System.out.print("  " + contador2 + " ");
+            } else {
+                System.out.print(" " + contador2 + " ");
+            }
+            contador2++;
+        }
+        System.out.println("");
+        int contador = 0;
+        for (int i = 0; i < tabla.length; i++) {
+            System.out.print(contador);
+            for (int j = 0; j < getTabla()[0].length; j++) {
+                if (tabla[i][j].isMina()) {
+                    System.out.print(" M ");
+                } else {
+                    if (calculaNumMinasCasilla(i, j) == 0) {
+                        System.out.print("   ");
+                    } else {
+                        System.out.print(" " + calculaNumMinasCasilla(i, j) + " ");
+                    }
+                }
+            }
+            System.out.print(contador + "\n");
+            contador++;
+        }
+        contador2 = 0;
+        for (int i = 0; i < tabla[0].length; i++) {
+            if (i == 0) {
+                System.out.print("  " + contador2 + " ");
+            } else {
+                System.out.print(" " + contador2 + " ");
+            }
+            contador2++;
+        }
+        System.out.println("");
     }
 
     /**
