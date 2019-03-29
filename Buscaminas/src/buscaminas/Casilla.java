@@ -50,7 +50,7 @@ public class Casilla {
              return "🏳";
         }
         if (numero>0) {
-            datos+=numero;
+            return Integer.toHexString(numero);
         }
         if (mina==true) {
             //return ="M";

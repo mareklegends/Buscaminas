@@ -20,6 +20,7 @@ public class Buscaminas {
         t.insetarMinas(5);
         //t.imprimirPrueba();
         t.calcularTablero();
+        t.imprimirPrueba();
         
     }
     

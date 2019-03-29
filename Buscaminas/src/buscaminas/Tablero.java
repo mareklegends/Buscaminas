@@ -65,13 +65,10 @@ public class Tablero {
         
         int contador = 0;
         System.out.println("B U S C A M I N A S");
-        System.out.println("___________________ ___________________");
+        System.out.println("______________________________________");
           System.out.print("    ");
         for (int i = 0; i < this.numColumnas; i++) {
-             
-            System.out.print(i);
-            System.out.print(" ");
-            
+            System.out.print(i + "  ");
         }
           System.out.println("");
           
@@ -81,7 +78,7 @@ public class Tablero {
                 System.out.print(i+" "+"| ");
               for (int j = 0; j < this.numColumnas; j++) {
                   
-                  System.out.print(tabla[i][j].imprimirPrueba() +" ");
+                  System.out.print(tabla[i][j].imprimirPrueba() +"  ");
               }
                  System.out.print("| "+i+" ");
               System.out.println("");
@@ -89,14 +86,12 @@ public class Tablero {
         }
           
               System.out.print("    ");
-        for (int i = 0; i < this.numColumnas; i++) {
-             
-            System.out.print(i);
-            System.out.print(" ");
-            
+              
+          for (int i = 0; i < this.numColumnas; i++) {
+            System.out.print(i + "  ");
         }
           System.out.println(" ");
-           System.out.println("___________________ ___________________");
+           System.out.println("______________________________________");
         
     }
 
@@ -144,48 +139,14 @@ public class Tablero {
      */
     public  void calcularTablero(){
         
-       
-        
-    int contador = 0;
-        System.out.println("B U S C A M I N A S");
-        System.out.println("___________________ ___________________");
-          System.out.print("   ");
-        for (int i = 0; i < this.numColumnas; i++) {            
-            System.out.print("  "+i+"  ");
-            
-        }
-          System.out.println("");
-          
-          
-          
-          for (int i = 0; i < this.numFilas; i++) {
-                System.out.print(i+" "+"| ");
-              for (int j = 0; j < this.numColumnas; j++) {
-                  
-                  System.out.print(" "+tabla[i][j].imprimirPrueba() +" ");
-                  
-                  if (calculaNumMinasCasilla(i, j) != 0) {
-                        System.out.print(calculaNumMinasCasilla(i, j)+" ");
-                    }
-                  else{
-                     System.out.print("  "); 
-                  }
-              }
-                 System.out.print("| "+i+" ");
-              System.out.println("");
-              
+        for (int i = 0; i < numFilas; i++) {
+            for (int j = 0; j < numColumnas; j++) {
+                if (!tabla[i][j].isMina()){
+                    tabla[i][j].setNumero(calculaNumMinasCasilla(i, j));
+                }
+            }
         }
         
-              System.out.print("   ");
-        for (int i = 0; i < this.numColumnas; i++) {
-             
-             System.out.print("  "+i+"  ");
-            
-        }
-          System.out.println("");
-           System.out.println("___________________ ___________________");
-        
-            
     }
 
     /**
