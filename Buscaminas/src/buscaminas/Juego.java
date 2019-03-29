@@ -43,29 +43,25 @@ public class Juego {
         System.out.println(">> Dime las minas");
         this.numMinas = leerMinas.nextInt();      
          System.out.println("______________________________________");
-        
-        
     }
     
     /**
      *
      */
     public void iniciarJuego(){
-        
-        configurarJuego();
-        
         this.tablero = new Tablero(numFilas, numColumnas);
         tablero.insetarMinas(numMinas);
         tablero.calcularTablero();
-        
-        Jugar();
-        
     }
     
     /**
      *
      */
     public void Jugar(){  
+        
+        configurarJuego();
+        iniciarJuego();
+        
         boolean bandera = false;
         
         while (bandera!=true) {            
