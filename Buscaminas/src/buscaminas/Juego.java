@@ -64,6 +64,7 @@ public class Juego {
         configurarJuego();
         iniciarJuego();
         
+        
     }
     
     private void mostrarTablero(){
@@ -78,11 +79,23 @@ public class Juego {
     } 
     private boolean cordenadasCorrectas(int fila, int columna){
         boolean acierto = false;
+        for (int i = 0; i < numFilas; i++) {
+            for (int j = 0; j < numColumnas; j++) {
+                if (fila>=0 && columna>=0) {
+                    if (fila <= numFilas && columna <= numColumnas) {
+                        acierto=true;
+                    }
+                }
+            }
+        }
         
         return acierto;
     }
     
     private void acabarjuegoMina(){
+        
+        
+        
         System.out.println("Juego finalizado has pisado una mina");
         
         //falta imprimir la solucion
