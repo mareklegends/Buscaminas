@@ -51,18 +51,41 @@ public class Juego {
      *
      */
     public void iniciarJuego(){
+        
+        configurarJuego();
+        
         this.tablero = new Tablero(numFilas, numColumnas);
         tablero.insetarMinas(numMinas);
         tablero.calcularTablero();
+        
+        Jugar();
         
     }
     
     /**
      *
      */
-    public void Jugar(){
-        configurarJuego();
-        iniciarJuego();
+    public void Jugar(){  
+        boolean bandera = false;
+        
+        while (bandera!=true) {            
+        
+        switch(elegirOperacion()){
+            case 1:
+                System.out.println("Descubirir casilla");
+                System.out.println("______________________________________");
+                
+                break;
+            case 2:
+                System.out.println("Descubrir blanco");
+                System.out.println("______________________________________");
+                
+                break;
+                   
+        }
+            
+       }
+        
         
         
     }
@@ -73,7 +96,21 @@ public class Juego {
     }
     
     private int elegirOperacion(){
-        int opc=0;
+        
+        Scanner leer = new Scanner(System.in);
+        
+        int opc=7;
+        
+        System.out.println(">>>>>>-----");
+        System.out.println("1. Descubirir casilla");
+        System.out.println("2. Descubrir blanco");
+        System.out.println("-----<<<<<<");
+        
+        while(opc!=1 || opc!=2){
+        System.out.println("Dime una opción");
+        opc=leer.nextInt();
+        System.out.println("______________________________________");
+        }
         
         return opc;
     } 
@@ -92,9 +129,7 @@ public class Juego {
         return acierto;
     }
     
-    private void acabarjuegoMina(){
-        
-        
+    private void acabarjuegoMina(){        
         
         System.out.println("Juego finalizado has pisado una mina");
         
