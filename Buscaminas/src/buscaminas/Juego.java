@@ -54,6 +54,7 @@ public class Juego {
         this.tablero = new Tablero(numFilas, numColumnas);
         tablero.insetarMinas(numMinas);
         tablero.calcularTablero();
+        
     }
     
     /**
