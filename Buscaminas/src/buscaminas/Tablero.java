@@ -113,7 +113,7 @@ public class Tablero {
             if (i >= 0 && i < getNumFilas()) {
                 for (int j = (columna - 1); j <= (columna + 1); j++) {
                     if (j >= 0 && j < getNumColumnas()) {
-                        if (getTabla()[i][j].isMina()) {
+                        if (tabla[i][j].isMina()) {
                             total++;
                         }
                     }
