@@ -140,7 +140,7 @@ public class Tablero {
     }
     
     /**
-     *
+     * Calcula el tablero del buscaminas
      */
     public  void calcularTablero(){
         
