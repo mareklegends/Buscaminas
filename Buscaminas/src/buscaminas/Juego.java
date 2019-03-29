@@ -69,13 +69,11 @@ public class Juego {
         switch(elegirOperacion()){
             case 1:
                 System.out.println("Descubirir casilla");
-                System.out.println("______________________________________");
-                
+                System.out.println("______________________________________");                
                 break;
             case 2:
                 System.out.println("Descubrir blanco");
-                System.out.println("______________________________________");
-                
+                System.out.println("______________________________________");                
                 break;
                    
         }
