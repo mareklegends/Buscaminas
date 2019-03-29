@@ -12,7 +12,7 @@ public class Casilla {
     private boolean blanco;
     private boolean bandera;
     private boolean visible;
-    private int numero;
+    private int numero;    
 
     /**
      *
