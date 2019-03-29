@@ -70,6 +70,7 @@ public class Juego {
             case 1:
                 System.out.println("Descubirir casilla");
                 System.out.println("______________________________________");                
+                
                 break;
             case 2:
                 System.out.println("Descubrir blanco");
