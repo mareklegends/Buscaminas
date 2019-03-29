@@ -18,7 +18,8 @@ public class Buscaminas {
         
         Tablero t = new Tablero(9, 9);
         t.insetarMinas(5);
-        t.imprimirPrueba();
+        //t.imprimirPrueba();
+        t.calcularTablero();
         
     }
     

@@ -29,7 +29,7 @@ public class Tablero {
         
         for (int i = 0; i < this.numFilas; i++) {
             for (int j = 0; j < this.numColumnas; j++) {
-                tabla[i][j] = new Casilla();
+                tabla[i][j] = new Casilla();                
             }
         }
     }
@@ -132,7 +132,7 @@ public class Tablero {
      * @return
      */
     public  Casilla getCasilla(int fila, int columna){
-     Casilla c = null;
+   Casilla c= null;
         if (fila >= 0 && fila <= numFilas && columna >= 00 && columna < numColumnas) {
             c = tabla[fila][columna];
         }
@@ -143,43 +143,49 @@ public class Tablero {
      *
      */
     public  void calcularTablero(){
-        int contador2 = 0;
-        for (int i = 0; i < tabla[0].length; i++) {
-            if (i == 0) {
-                System.out.print("  " + contador2 + " ");
-            } else {
-                System.out.print(" " + contador2 + " ");
-            }
-            contador2++;
+        
+       
+        
+    int contador = 0;
+        System.out.println("B U S C A M I N A S");
+        System.out.println("___________________ ___________________");
+          System.out.print("    ");
+        for (int i = 0; i < this.numColumnas; i++) {
+             
+            System.out.print(i);
+            System.out.print(" ");
+            
         }
-        System.out.println("");
-        int contador = 0;
-        for (int i = 0; i < tabla.length; i++) {
-            System.out.print(contador);
-            for (int j = 0; j < getTabla()[0].length; j++) {
-                if (tabla[i][j].isMina()) {
-                    System.out.print(" M ");
-                } else {
-                    if (calculaNumMinasCasilla(i, j) == 0) {
-                        System.out.print("   ");
-                    } else {
-                        System.out.print(" " + calculaNumMinasCasilla(i, j) + " ");
+          System.out.println("");
+          
+          
+          
+          for (int i = 0; i < this.numFilas; i++) {
+                System.out.print(i+" "+"| ");
+              for (int j = 0; j < this.numColumnas; j++) {
+                  
+                  System.out.print(tabla[i][j].imprimirPrueba() +" ");
+                  
+                  if (calculaNumMinasCasilla(i, j) != 0) {
+                        System.out.print(calculaNumMinasCasilla(i, j)+" ");
                     }
-                }
-            }
-            System.out.print(contador + "\n");
-            contador++;
+              }
+                 System.out.print("| "+i+" ");
+              System.out.println("");
+              
         }
-        contador2 = 0;
-        for (int i = 0; i < tabla[0].length; i++) {
-            if (i == 0) {
-                System.out.print("  " + contador2 + " ");
-            } else {
-                System.out.print(" " + contador2 + " ");
-            }
-            contador2++;
+          
+              System.out.print("    ");
+        for (int i = 0; i < this.numColumnas; i++) {
+             
+            System.out.print(i);
+            System.out.print(" ");
+            
         }
-        System.out.println("");
+          System.out.println(" ");
+           System.out.println("___________________ ___________________");
+        
+            
     }
 
     /**
