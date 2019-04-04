@@ -86,7 +86,7 @@ public class Juego {
                         mostrarTablero();
                     }
                     if (descubrirCasilla(fila, columna) == 3) {
-                        System.out.println("No has indicado una posición válida.");
+                        System.out.println("La posición no es válida.");
                         mostrarTablero();
                     }
                     if (PartidaGanada()) {
@@ -105,7 +105,7 @@ public class Juego {
                             repeticion = false;
                         }
                     } else {
-                        System.out.println("No has indicado una posición válida.");
+                        System.out.println("La posición no es válida.");
                     }
                     break;
                 case 3:
@@ -117,7 +117,7 @@ public class Juego {
                         tablero.getCasilla(fila, columna).setBandera(false);
                         tablero.getCasilla(fila, columna).setVisible(false);
                     } else {
-                        System.out.println("No has indicado una posición válida.");
+                        System.out.println("La posición no es válida.");
                     }
                     break;
                 case 4:
