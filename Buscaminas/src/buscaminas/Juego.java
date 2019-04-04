@@ -164,7 +164,8 @@ public class Juego {
     private void acabarjuegoMina(){        
         
         System.out.println("Juego finalizado has pisado una mina. \nSolución de la partida:");
-        tablero.calcularTablero();
+        //tablero.calcularTablero();
+        tablero.imprimirPrueba();
     }
     
     private int descubrirCasilla(int fila, int columna){
