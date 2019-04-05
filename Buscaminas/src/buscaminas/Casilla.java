@@ -118,7 +118,7 @@ public class Casilla {
      */
     public void setBandera(boolean bandera) {
         this.bandera = bandera;
-    }
+    }    
 
     /**
      * En la posición que has dicho dice si esta visible o no
