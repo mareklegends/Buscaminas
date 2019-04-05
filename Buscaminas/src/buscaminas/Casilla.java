@@ -39,7 +39,9 @@ public class Casilla {
         this.visible = false;
         this.numero = 0;
     }
-    
+    /**
+     * Imprime los resultados
+     */
     public String imprimirPrueba(){
         String datos="";
         

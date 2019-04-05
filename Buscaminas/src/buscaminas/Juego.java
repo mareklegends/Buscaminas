@@ -24,7 +24,7 @@ public class Juego {
     }
     
     /**
-     *
+     * Configuración del juego
      */
     public void configurarJuego(){
         Scanner leerFilas = new Scanner(System.in);
@@ -46,7 +46,7 @@ public class Juego {
     }
     
     /**
-     *
+     * Inicio de juego
      */
     public void iniciarJuego(){
         this.tablero = new Tablero(numFilas, numColumnas);
@@ -55,7 +55,7 @@ public class Juego {
     }
     
     /**
-     *
+     * Jugar ya al buscaminas
      */
     public void Jugar(){  
         
@@ -73,9 +73,9 @@ public class Juego {
             switch (numero) {
                 case 1:
 
-                    System.out.print(" - Fila:");
+                    System.out.print("Dime la fila:");
                     fila = leer.nextInt();
-                    System.out.print(" - Columna:");
+                    System.out.print("Dime la columna:");
                     columna = leer.nextInt();
                     if (descubrirCasilla(fila, columna) == 1) {
                         acabarjuegoMina();
@@ -94,9 +94,9 @@ public class Juego {
                     }
                     break;
                 case 2:
-                    System.out.print(" >>> Fila:");
+                    System.out.print("Dime la fila:");
                     fila = leer.nextInt();
-                    System.out.print(" >>> Columna:");
+                    System.out.print("Dime la columna:");
                     columna = leer.nextInt();
                     if (cordenadasCorrectas(fila, columna) == true) {
                         tablero.getCasilla(fila, columna).setVisible(true);
@@ -109,9 +109,9 @@ public class Juego {
                     }
                     break;
                 case 3:
-                    System.out.print("   -> Fila:");
+                    System.out.print("Dime la fila:");
                     fila = leer.nextInt();
-                    System.out.print("   -> Columna:");
+                    System.out.print("Dime la columna:");
                     columna = leer.nextInt();
                     if (cordenadasCorrectas(fila, columna) == true && tablero.getCasilla(fila, columna).isBandera()) {
                         tablero.getCasilla(fila, columna).setBandera(false);
@@ -129,12 +129,16 @@ public class Juego {
         
         
     }
-    
+    /**
+     * mostrar el tablero del buscaminas
+     */
     private void mostrarTablero(){
         tablero.imprimirPrueba();
         
     }
-    
+    /**
+     * Menu del buscaminas
+    */
     private int elegirOperacion(){
         
         Scanner op = new Scanner(System.in);
@@ -153,6 +157,9 @@ public class Juego {
 
         return opc;
     } 
+    /**
+     * Calcula el tablero del buscaminas
+     */
     private boolean cordenadasCorrectas(int fila, int columna){
         boolean acierto = false;
         if (fila >= 0 && fila < numFilas && columna >= 0 && columna < numColumnas && !tablero.getCasilla(fila, columna).isVisible()) {
@@ -160,14 +167,18 @@ public class Juego {
         }
         return acierto;
     }
-    
+    /**
+     * Termina el juego
+     */
     private void acabarjuegoMina(){        
         
         System.out.println("Juego finalizado has pisado una mina. \nSolución de la partida:");
         //tablero.calcularTablero();
         tablero.imprimirPrueba();
     }
-    
+    /**
+     * Descubrir la casilla
+     */
     private int descubrirCasilla(int fila, int columna){
            if (cordenadasCorrectas(fila, columna) == true) {
             if (tablero.getCasilla(fila, columna).isMina()) {
@@ -179,7 +190,9 @@ public class Juego {
             return 3;
         }
     }
-    
+    /**
+     * Descubrir blanco
+     */
     private void descubrirBlanco(int fila, int columna){
           tablero.getCasilla(fila, columna).setVisible(true);
         if (tablero.calculaNumMinasCasilla(fila, columna) == 0) {
@@ -194,6 +207,9 @@ public class Juego {
         }
     
     }
+    /**
+     * Finaliza la partida cuando hayas ganado
+     */
     private boolean PartidaGanada(){
            int contador = 0;
         int total = tablero.getNumFilas() * tablero.getNumColumnas();
