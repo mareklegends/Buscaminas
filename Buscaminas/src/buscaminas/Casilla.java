@@ -81,6 +81,7 @@ public class Casilla {
     
     
 /** 
+ * Cambiar mina
  * @param mira 
  */
     public void setMina(boolean mina) {
@@ -88,7 +89,7 @@ public class Casilla {
     }
 
     /**
-     *
+     * Devuelve si es blanco o no
      * @return
      */
     public boolean isBlanco() {
@@ -96,7 +97,7 @@ public class Casilla {
     }
 
     /**
-     *
+     * Pone la posición en blanco
      * @param blanco
      */
     public void setBlanco(boolean blanco) {
@@ -104,7 +105,7 @@ public class Casilla {
     }
 
     /**
-     *
+     * Dice si hay una bandera en la posición dada
      * @return
      */
     public boolean isBandera() {
@@ -112,7 +113,7 @@ public class Casilla {
     }
 
     /**
-     *
+     * En la posición que le has dicho coloca una bandera
      * @param bandera
      */
     public void setBandera(boolean bandera) {
@@ -120,7 +121,7 @@ public class Casilla {
     }
 
     /**
-     *
+     * En la posición que has dicho dice si esta visible o no
      * @return
      */
     public boolean isVisible() {
