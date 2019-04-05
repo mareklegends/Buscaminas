@@ -8,6 +8,8 @@ import java.util.Random;
 /**
  *
  * @author marcos
+ * @version 1.0
+ * 
  */
 public class Tablero {
     private int numFilas;

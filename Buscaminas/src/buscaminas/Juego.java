@@ -6,6 +6,8 @@ import java.util.Scanner;
 /**
  *
  * @author marcos
+ * @version 1.0
+ * 
  */
 public class Juego {
     private Tablero tablero;
